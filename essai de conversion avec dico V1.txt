@@ -1,0 +1,28 @@
+#exercice avec dictionnaire de transfo chiffres romain arabe 
+
+romain_arabe = {}
+romain_arabe = {"M" : 1000, "D":500, "C":100, "L": 50, "X" :10, "V":5, "i":1}
+print("nombre en chiffres romains ?") 
+nombre= str(input()) #prend l'input en chaine de caractère 
+
+for i in romain_arabe.keys(): 
+	print("{0} est {1} ".format(i, romain_arabe[i]))
+
+#conversion en chiffres arabes
+
+def convert(nombre):
+	while i in range(len(nombre)):
+		if romain_arabe.get(nombre[i]) >= romain_arabe.get(nombre[i+1]):
+			number = romain_arabe.get(nombre[i])
+			i+=i
+		else:
+			number = romain_arabe.get(nombre[i+1]) - romain_arabe.get(nombre[i])
+			i=i+2
+print(number)
+
+
+
+
+
+
+	
